@@ -1,0 +1,24 @@
+day-2(suyash goyal)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    
+    while (T--) {
+        int X, Y, Z;
+        cin >> X >> Y >> Z;
+        
+        // Calculate the total money Chef has
+        int total_money = X * 5 + Y * 10;
+        
+        // Calculate the maximum chocolates Chef can buy
+        int max_chocolates = total_money / Z;
+        
+        cout << max_chocolates << endl;
+    }
+    
+    return 0;
+}
