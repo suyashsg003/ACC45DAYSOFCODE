@@ -1,0 +1,23 @@
+day-3(suyash goyal)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T; // Number of test cases
+
+    while (T--) {
+        int X, Y;
+        cin >> X >> Y; // Number of students and chairs
+
+        // Calculate the minimum number of extra chairs needed
+        int extra_chairs = max(0, X - Y);
+
+        // Output the result for this test case
+        cout << extra_chairs << endl;
+    }
+
+    return 0;
+}
+
