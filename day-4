@@ -1,0 +1,27 @@
+day-4(suyash goyal)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T; // Input the number of test cases
+
+    while (T--) {
+        int X, Y;
+        cin >> X >> Y; // Input daily goal (X) and chocolates sold (Y)
+
+        int total_earnings;
+
+        if (Y <= X) {
+            total_earnings = Y; // Chef earns 1 rupee per chocolate sold
+        } else {
+            total_earnings = X + (Y - X) * 2; // Chef earns 2 rupees for extra chocolates sold
+        }
+
+        cout << total_earnings << endl; // Output the total earnings for the current test case
+    }
+
+    return 0;
+}
