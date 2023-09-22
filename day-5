@@ -1,0 +1,37 @@
+day-5(suyash goyal)
+
+  #include <iostream>
+using namespace std;
+
+// Function to find the last hoop that will be jumped into
+int findLastHoop(int N) {
+    // If N is 1, the first player jumps into the only hoop, so return 1
+    if (N == 1) {
+        return 1;
+    }
+
+    // Find the largest power of 2 less than or equal to N
+    int powerOf2 = 1;
+    while (powerOf2 <= N) {
+        powerOf2 *= 2;
+    }
+    powerOf2 /= 2;
+
+    // Calculate the last hoop number
+    int lastHoop = (N - powerOf2) * 2 ;
+    return lastHoop;
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    for (int i = 0; i < T; i++) {
+        int N;
+        cin >> N;
+        int result = findLastHoop(N);
+        cout << result << endl;
+    }
+
+    return 0;
+}
