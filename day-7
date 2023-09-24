@@ -1,0 +1,17 @@
+day-7(suyash goyal)
+
+  #include <iostream>
+using namespace std;
+
+int main() {
+	
+	int t;
+	cin>>t;
+	for(int i=0; i<t; i++){
+	    int a,b,c,max1=0;
+	    cin>>a>>b>>c;
+	    max1=max(b,(a+c));
+	    cout<<max1<<endl;
+	}
+	return 0;
+}
