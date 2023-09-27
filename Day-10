@@ -1,0 +1,28 @@
+day-10(suyash  goyal)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T,A,B,C,D,E;
+	cin>>T;
+	
+	while(T--)
+	{
+	    cin>>A;
+	    cin>>B;
+	    cin>>C;
+	    cin>>D;
+	    cin>>E;
+	    
+	    if((A+B)<=D && C<=E || (A+C)<=D && B<=E || (B+C)<=D && A<=E)
+	    {
+	        cout<<"YES"<<endl;
+	    }
+	    else
+	    {
+	        cout<<"NO"<<endl;
+	    }
+	}
+	return 0;
+}
