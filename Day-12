@@ -1,0 +1,39 @@
+day-12(suyash goyal)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int A, B;
+        cin >> A >> B;
+
+        int limakCandies = 1;
+        int bobCandies = 2;
+        int turn = 1;  // Start with Limak's turn
+
+        while (true) {
+            if (turn == 1) {  // Limak's turn
+                if (limakCandies > A) {
+                    cout << "Bob" << endl;
+                    break;
+                }
+                A -= limakCandies;
+                limakCandies += 2;
+            } else {  // Bob's turn
+                if (bobCandies > B) {
+                    cout << "Limak" << endl;
+                    break;
+                }
+                B -= bobCandies;
+                bobCandies += 2;
+            }
+            turn = 1 - turn;  // Toggle turn between 0 (Bob) and 1 (Limak)
+        }
+    }
+
+    return 0;
+}
