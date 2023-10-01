@@ -1,0 +1,16 @@
+day-13(suyash goyal)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	for(int j=0; j<t; j++){
+	    long n;
+	    cin>>n;
+	    cout<<(n*n)/2<<endl;
+	}
+	return 0;
+}
