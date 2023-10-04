@@ -1,0 +1,46 @@
+day-17(suyash goyal)
+
+  #include <iostream>
+using namespace std;
+void getdata(int num,int arr[]){
+    for(int i=0; i<num; i++){
+        cin>>arr[i];
+    }
+}
+int position(int num,int arr[]){
+    int posi=0,count=0,max1=0,temp=0;
+    for(int i=0; i<num; i++){
+        if(arr[i]==0){
+            max1=max(max1,count);
+           // temp=max1;
+            count=0;
+        }
+        else{
+            count++;
+        }
+    }
+    return max(max1,count);
+}
+int main(){
+    int t;
+    cin>>t;
+    for(int i=0; i<t; i++){
+        int num,posi1=0,posi2=0;
+        cin>>num;
+        int arr1[num],arr2[num];
+        getdata(num,arr1);
+        getdata(num,arr2);
+        posi1=position(num,arr1);
+        posi2=position(num,arr2);
+        if(posi1>posi2){
+            cout<<"Om"<<endl;
+        }
+        else if(posi1<posi2){
+            cout<<"Addy"<<endl;
+        }
+        else{
+            cout<<"Draw"<<endl;
+        }
+        
+    }
+}
