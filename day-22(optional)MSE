@@ -1,0 +1,37 @@
+mid semester exam on going,so a baisc password code:-
+
+  #include <iostream>
+using namespace std;
+int main()
+{
+char response;
+int passcode = 1234;
+int input;
+int lock = 3;
+int limit = 0;
+
+
+cout << "Welcome user!" << endl;
+cout << " Please enter your passcode: " << endl;
+cin >> input;
+
+
+if (input == passcode)
+{
+cout << "Password was correct, Welcome!" << endl;
+}
+else if
+{
+while (input != passcode)
+
+cout << " Incorrect passcode, You have " << lock-- << "Trys remaining" << endl;
+
+if (lock == 0)
+cout << " Too many tries mother. " << endl;
+break;
+}
+cin >> response; //I can't seem to figure out what you wanted to do on this line, response isn't even declared, safe to delete.
+return 0;
+
+
+}
