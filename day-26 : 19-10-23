@@ -1,0 +1,33 @@
+day-26(suyash goyal)
+
+
+  #include <iostream>
+using namespace std;
+
+// Function to determine the winner for a single test case
+string findWinner(int a1, int a2, int a3, int b1, int b2, int b3) {
+    int aliceMax = max(max(a1, a2), a3);
+    int bobMax = max(max(b1, b2), b3);
+
+    if (aliceMax > bobMax) {
+        return "Alice";
+    } else if (aliceMax < bobMax) {
+        return "Bob";
+    } else {
+        return "Tie";
+    }
+}
+
+int main() {
+    int t;
+    cin >> t;
+
+    for (int i = 0; i < t; i++) {
+        int a1, a2, a3, b1, b2, b3;
+        cin >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
+        string result = findWinner(a1, a2, a3, b1, b2, b3);
+        cout << result << endl;
+    }
+
+    return 0;
+}
