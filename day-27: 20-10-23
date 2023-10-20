@@ -1,0 +1,32 @@
+day-23(suyash goyal)
+
+
+  #include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,count=0;
+	    cin>>n;
+	    string a;
+	    cin>>a;
+	    for(int i=0;i<n;i++){
+	        if(a[i]=='1'){
+	            count++;
+	        }
+	    }
+	    int d=count+(120-n);
+	    int b=(d*100)/120;
+	    
+	    if(b<75){
+	        cout<<"NO"<<endl;
+	    }
+	    else{
+	        cout<<"YES"<<endl;
+	    }
+	}
+	return 0;
+}
