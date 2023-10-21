@@ -1,0 +1,23 @@
+day-28(suyash goyal)'
+
+  #include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	for(int i=0; i<t; i++){
+	    string s;
+	    cin>>s;
+	    int count=0;
+	    int len=s.size();
+	    for(int i=0; i<len; i++){
+	        if(s[i]=='<' && s[i+1]=='>'){
+	            count++;
+	        }
+	    }
+	    cout<<count<<endl;
+	}
+	return 0;
+}
