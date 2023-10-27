@@ -1,0 +1,24 @@
+day-34(suyash goyal)
+
+
+  #include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	for(int i=0; i<t; i++){
+	    string n;
+	    int count=0;
+	    cin>>n;
+	    for(int i=0; i<n.size(); i++){
+	        if(n[i]!=n[i+1]){
+	            count++;
+	        }
+	       }
+	       cout<<count/2<<endl;
+	}
+	return 0;
+}
